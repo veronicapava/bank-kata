@@ -1,19 +1,53 @@
 Kata de cuenta bancaria
 =================
 
-Piense en la experiencia de su cuenta bancaria personal
-En caso de duda, opte por la solución más sencilla
+Piense en la experiencia de su cuenta bancaria personal. En caso de duda, opte por la solución más sencilla
 
 Requisitos
 ------------
 
-Depósito y retiro
-Transferir
-Estado de cuenta (fecha, monto, saldo)
-Impresión de estados de cuenta
-Filtros de estados de cuenta (solo depósitos, retiro, fecha)
+- Depósito y retiro
+- Transferir
+- Estado de cuenta (fecha, monto, saldo)
+- Impresión de estados de cuenta
+- Filtros de estados de cuenta (solo depósitos, retiro, fecha)
 
-Las normas
+```java
+public class Account {
+
+    void deposit(int amount) {
+
+    }
+
+    void withdraw(int amount){
+
+    }
+
+    void printStatements() {
+
+    }
+
+}
+```
+
+## De la siguiente forma se debería ejecutar:
+
+```java
+public class StartApp {
+	
+	public static void main(String[] args) {
+		Account account = new Account(new Statement());
+		
+		account.deposit(amountOf(1000), date("10/01/2021"));
+		account.deposit(amountOf(2000), date("13/01/2021"));
+		account.withdrawal(amountOf(500), date("14/01/2021"));
+		
+		account.printStatement(System.out);
+	}
+
+}
+```
+Las reglas
 ---------
 
 1. Un nivel de sangría por método
@@ -34,25 +68,17 @@ Estantería pragmática 2008
 - Idea original para el kata: ¿Qué tan orientado a objetos te sientes hoy? - Krzysztof Jelski (Sesión sobre la conferencia Software Craftsmanship UK 2011)
 
 
-### Mi solución (* sin terminar *)
+### Ejemplo
 
-Comenzó con la definición de una prueba de aceptación:
-
-> Dado que un cliente realiza un depósito de 1000 el 10-01-2012
-Y un depósito de 2000 el 13-01-2012
-Y una retirada de 500 el 14-01-2012
+Dado que un cliente realiza un depósito de 1000 el 10-01-2021
+Y un depósito de 2000 el 13-01-2021
+Y una retirada de 500 el 14-01-2021
 Cuando imprime su extracto bancario
-Entonces ella vería
-fecha || crédito || débito || equilibrio
-14/01/2012 || || 500,00 || 2500,00
-13/01/2012 || 2000,00 || || 3000,00
-10/01/2012 || 1000,00 || || 1000,00
+Entonces ella vería:
 
-Hágalo usted mismo primero y luego compare las soluciones.
+date       | credit   | debit    | balance  
+|---|---|---|---|
+14/01/2021 |          | 500.00   | 2500.00   
+13/01/2021 | 2000.00  |          | 3000.00  
+10/01/2021 | 1000.00  |          | 1000.00   
 
-Los archivos para mirar:
-
-[statement_printing.story] (https://github.com/sandromancuso/Bank-kata/blob/master/src/test/resources/org/craftedsw/acceptancetests/stories/statement_printing.story)
-[StatementPrintingSteps.java] (https://github.com/sandromancuso/Bank-kata/blob/master/src/test/java/org/craftedsw/acceptancetests/steps/StatementPrintingSteps.java)
-[Pruebas unitarias] (https://github.com/sandromancuso/Bank-kata/tree/master/src/test/java/org/craftedsw/domain/test)
-[Clases de dominio] (https://github.com/sandromancuso/Bank-kata/tree/master/src/main/java/org/craftedsw/domain)
