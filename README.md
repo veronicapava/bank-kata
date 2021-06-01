@@ -1,4 +1,4 @@
-Kata de cuenta bancaria
+Kata de cuenta bancaria (Object Calisthenics)
 =================
 
 Piense en la experiencia de su cuenta bancaria personal. En caso de duda, opte por la solución más sencilla
@@ -58,14 +58,14 @@ Las reglas
 6. No abrevie
 7. Mantenga todas las entidades pequeñas (50 líneas)
 8. No hay clases con más de dos variables de instancia.
-9. Sin captadores / definidores / propiedades
+9. Sin captadores/definidores/propiedades
 
 #### Para más información:
 
 - [Object Calistenia pdf] (http://www.cs.helsinki.fi/u/luontola/tdd-2009/ext/ObjectCalisthenics.pdf)
 - Object Calisthenics (libro completo), Jeff Bay en: The ThoughtWorks Anthology.
 Estantería pragmática 2008
-- Idea original para el kata: ¿Qué tan orientado a objetos te sientes hoy? - Krzysztof Jelski (Sesión sobre la conferencia Software Craftsmanship UK 2011)
+- Idea original para el kata: ¿Qué tan orientado a objetos te sientes hoy?
 
 
 ### Ejemplo
